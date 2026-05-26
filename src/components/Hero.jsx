@@ -1,40 +1,58 @@
 import React from "react";
+import fotoPerfil from "/src/assets/Foto_Leandro_de_Farias_Lima.jpg";
+import githubIcon from "/src/assets/icon-elsewhere-github-light-f2ca0d9c1d561a397d6813c123c89c34363fdd779ea7aaed50f46d409ad3cd0c 1.svg";
+import instagramIcon from "/src/assets/icon-elsewhere-instagram-light-9aaca80ee099a4c63f91f86a88a1e970f4143dbeec87d1734a1f69f1d81f56d5 1.svg";
+import linkedinIcon from "/src/assets/icon-elsewhere-linkedin-light-97696cd7d286b01f0af63582dce0bc08833ced6958585e43ee20a8293e4dbf40 1.svg";
 
 const Hero = () => {
   return (
-    <header id="sobre" className="text-white mt-[-96px] w-full h-screen flex items-center justify-center">
-      <div className="max-w-[1240px] w-full mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
-        {/* Imagem - lado esquerdo em desktop, topo em mobile */}
-        <div className="flex flex-shrink-0">
-          <img src="./src/assets/Foto_Leandro_de_Farias_Lima.jpg" alt="Leandro Farias" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover" />
+    // Trocamos h-screen por min-h-screen e adicionamos pt-24 para compensar o Navbar fixed de forma segura
+    <section id="sobre" className="text-white w-full pt-24 min-h-screen flex items-center justify-center bg-[#000300]">
+      <div className="max-w-[1240px] w-full mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-12">
+        
+        {/* Imagem - Ajuste de alinhamento em mobile */}
+        <div className="flex-shrink-0 order-first md:order-none">
+          <div className="w-36 h-36 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full p-1 bg-gradient-to-r flow-from-indigo-500 to-purple-500"> 
+            {/* Um leve degradê de borda deixa mais profissional */}
+            <img 
+              src={fotoPerfil} 
+              alt="Foto de perfil de Leandro Farias" 
+              className="w-full h-full rounded-full object-cover" 
+            />
+          </div>
         </div>
 
-        {/* Conteúdo - lado direito em desktop, embaixo em mobile */}
-        <div className="flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">Leandro Farias</h1>
-          <h2 className="text-lg md:text-lg font-sans text-slate-300 mb-6">Aracaju, Sergipe</h2>
-          <p className="text-sm md:text-base font-sans text-slate-300 leading-relaxed mb-6 max-w-md">
+        {/* Conteúdo */}
+        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-2">
+            Leandro Farias
+          </h1>
+          <h2 className="text-sm sm:text-base md:text-lg font-medium text-purple-400 mb-4">
+            Aracaju, Sergipe
+          </h2>
+          <p className="text-sm md:text-base text-slate-300 leading-relaxed mb-6 max-w-md">
             As a passionate data scientist, with expertise in machine learning,
             AI, and data analytics, I thrive on the challenges of exploring
             complex data landscapes and uncovering meaningful patterns that drive
-            innovation
+            innovation.
           </p>
           
           {/* Links sociais */}
-          <div className="flex gap-6">
-            <a href="http://" className="hover:opacity-80 transition-opacity">
-              <img src="/src/assets/icon-elsewhere-github-light-f2ca0d9c1d561a397d6813c123c89c34363fdd779ea7aaed50f46d409ad3cd0c 1.svg" alt="github" className="w-6 h-6" />
+          <div className="flex gap-5">
+            <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform p-1">
+              <img src={githubIcon} alt="Acessar GitHub" className="w-6 h-6" />
             </a>
-            <a href="http://" className="hover:opacity-80 transition-opacity">
-              <img src="/src/assets/icon-elsewhere-instagram-light-9aaca80ee099a4c63f91f86a88a1e970f4143dbeec87d1734a1f69f1d81f56d5 1.svg" alt="instagram" className="w-6 h-6" />
+            <a href="https://instagram.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform p-1">
+              <img src={instagramIcon} alt="Acessar Instagram" className="w-6 h-6" />
             </a>
-            <a href="http://" className="hover:opacity-80 transition-opacity">
-              <img src="/src/assets/icon-elsewhere-linkedin-light-97696cd7d286b01f0af63582dce0bc08833ced6958585e43ee20a8293e4dbf40 1.svg" alt="linkedin" className="w-6 h-6" />
+            <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform p-1">
+              <img src={linkedinIcon} alt="Acessar LinkedIn" className="w-6 h-6" />
             </a>
           </div>
         </div>
+
       </div>
-    </header>
+    </section>
   );
 };
 
