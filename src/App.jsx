@@ -1,10 +1,11 @@
 import React from 'react';
+import { MdPortableWifiOff } from 'react-icons/md';
 import Hero from './components/Hero.jsx';
 import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
-import { MdPortableWifiOff } from 'react-icons/md';
 import Project from './components/Project.jsx';
 import Skills from './components/Skills.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   // Lista simulada de projetos (isso é bem comum no React)
@@ -22,6 +23,8 @@ function App() {
       <Hero />
       <Project />
       <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 }
