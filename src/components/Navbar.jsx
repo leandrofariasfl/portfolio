@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#000300]/90 backdrop-blur-md border-b border-gray-800">
       <div className="flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white">
         {/* Corrigido text-1xl para text-xl */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-mono">Leandro.dev</h1>
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-mono">.dev</h1>
         
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-2">
