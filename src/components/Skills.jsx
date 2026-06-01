@@ -16,7 +16,7 @@ const Skills = () => {
         {/* SUBTÍTULO DA SEÇÃO */}
         <div className="text-center mb-16">
           <p className="text-sm sm:text-base text-texto-corpo tracking-wide font-normal max-w-xl mx-auto">
-            The skills, tools and technologies I am really good at:
+            Ferramentas e tecnologias do meu arsenal de desenvolvimento
           </p>
         </div>
 
