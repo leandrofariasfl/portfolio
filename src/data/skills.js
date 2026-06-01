@@ -1,29 +1,20 @@
 // src/data/skills.js
 import { 
-  SiPython, SiR, SiApachespark, SiScikitlearn, 
-  SiTensorflow, SiPytorch, SiOpenai, SiHuggingface,
-  SiPostgresql, SiMongodb, SiDocker, SiGit,
-  SiReact, SiTailwindcss, SiFastapi, SiFlask
+  SiPython, SiHtml5, SiJavascript, SiR, SiGit,
+  SiReact, SiTailwindcss, SiFigma
 } from 'react-icons/si';
 
 export const SKILLS_DATA = [
   {
-    category: "Data Science & Analytics",
+    category: "Ferramentas",
     techs: [
+      { name: "HTML5", icon: SiHtml5, color: "#E34C26" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Figma", icon: SiFigma, color: "#F05032" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "R Language", icon: SiR, color: "#276DC3" },
-      { name: "Apache Spark", icon: SiApachespark, color: "#E25A1B" },
-      { name: "Scikit-Learn", icon: SiScikitlearn, color: "#F7931E" },
+      { name: "Git", icon: SiGit, color: "#F05032" },
     ]
   },
-  {
-    category: "Inteligência Artificial & LLMs",
-    techs: [
-      { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
-      { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
-      { name: "OpenAI API", icon: SiOpenai, color: "#412991" },
-      { name: "Hugging Face", icon: SiHuggingface, color: "#FFD21E" },
-    ]
-  }
-  // ... adicione as outras se quiser testar primeiro com essas duas
 ];

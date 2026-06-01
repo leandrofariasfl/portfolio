@@ -1,43 +1,54 @@
-// src/components/Skills.jsx
 import React from 'react';
 import { SKILLS_DATA } from '../data/skills';
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-full bg-[#000300] py-16 px-4 md:py-24 border-t border-slate-900">
-      <div className="max-w-[1240px] mx-auto w-full flex flex-col">
+    // Aplicando sua paleta global: bg-fundo-principal (rgba(3, 7, 18, 1))
+    <section id="skills" className="w-full bg-fundo-principal py-20 px-4 md:py-28 ">
+      <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
         
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
-            Habilidades & Tecnologias
-          </h2>
+        <div className="mb-4">
+          <span className="px-5 py-1.5 bg-fundo-elemento/50 border border-fundo-elemento/40 text-texto-corpo text-xs font-medium rounded-full font-mono tracking-wide">
+            Skills
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {SKILLS_DATA.map((group, index) => (
-            <div key={index} className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6">
-              <h3 className="text-lg font-bold text-blue-400 mb-6 border-b border-slate-800 pb-2">
-                {group.category}
-              </h3>
+        {/* SUBTÍTULO DA SEÇÃO */}
+        <div className="text-center mb-16">
+          <p className="text-sm sm:text-base text-texto-corpo tracking-wide font-normal max-w-xl mx-auto">
+            The skills, tools and technologies I am really good at:
+          </p>
+        </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* 💡 CONTAINER DOS ÍCONES (Layout fluido e aberto, sem caixas pesadas) */}
+        <div className="w-full flex flex-col gap-12">
+          {SKILLS_DATA.map((group, groupIndex) => (
+            <div key={groupIndex} className="w-full">
+
+              {/* GRID DOS ÍCONES: Responsivo de 3 a 8 colunas dependendo do dispositivo */}
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-10 justify-items-center">
                 {group.techs.map((tech, techIndex) => {
-                  // Renomeamos para Letra Maiúscula para o React entender que é um componente
                   const IconComponent = tech.icon; 
                   
                   return (
-                    <div key={techIndex} className="flex flex-col items-center justify-center p-4 bg-slate-900 rounded-xl border border-slate-800/50 group">
-                      <div className="text-3xl sm:text-4xl mb-2.5 transition-transform duration-300 group-hover:-translate-y-1">
-                        {/* Renderização dinâmica e segura do ícone com a cor injetada */}
+                    <div 
+                      key={techIndex} 
+                      className="flex flex-col items-center justify-center group w-24 transition-all duration-300"
+                    >
+                      {/* ÍCONE COM TRANSIÇÃO PREMIUM */}
+                      <div className="text-4xl sm:text-5xl mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5 filter brightness-95 group-hover:brightness-110">
                         <IconComponent style={{ color: tech.color }} />
                       </div>
-                      <span className="text-xs sm:text-sm font-medium text-slate-300 text-center">
+                      
+                      {/* NOME DA TECNOLOGIA */}
+                      <span className="text-xs sm:text-sm font-normal text-texto-corpo text-center tracking-tight transition-colors duration-300 group-hover:text-texto-titulo">
                         {tech.name}
                       </span>
                     </div>
                   );
                 })}
               </div>
+
             </div>
           ))}
         </div>

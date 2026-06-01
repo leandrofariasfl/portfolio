@@ -32,16 +32,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="w-full bg-[#000300] py-16 px-4 md:py-24 border-t border-slate-900">
+    <section id="contato" className="w-full bg-[#000300] py-16 px-4 md:py-24">
       <div className="max-w-[1240px] mx-auto w-full flex flex-col gap-12">
         
         {/* Título da Seção */}
         <div className="text-center max-w-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-            Vamos Conversar?
-          </h2>
+          <div className="mb-4">
+          <span className="px-5 py-1.5 bg-fundo-elemento/50 border border-fundo-elemento/40 text-texto-corpo text-xs font-medium rounded-full font-mono tracking-wide">
+            Contato
+          </span>
+        </div>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Seja para discutir um novo projeto de IA, análise de dados ou apenas para tomar um café virtual, fique à vontade para entrar em contato!
+            fique à vontade para entrar em contato!
           </p>
         </div>
 
@@ -59,8 +61,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">E-mail</p>
-                  <a href="mailto:leandro.farias@example.com" className="text-sm text-slate-300 hover:text-blue-400 transition-colors break-all">
-                    leandro.farias@example.com
+                  <a href="mailto:leandrofariasfl28884@gmail.com" className="text-sm text-slate-300 hover:text-blue-400 transition-colors break-all">
+                    leandrofariasfl28884@gmail.com
                   </a>
                 </div>
               </div>

@@ -7,7 +7,7 @@ import linkedinIcon from "/src/assets/icon-elsewhere-linkedin-light-97696cd7d286
 const Hero = () => {
   return (
     // Trocamos h-screen por min-h-screen e adicionamos pt-24 para compensar o Navbar fixed de forma segura
-    <section id="sobre" className="text-white w-full pt-24 min-h-screen flex items-center justify-center bg-[#000300]">
+    <section id="sobre" className="text-texto-corpo w-full pt-24 min-h-screen flex items-center justify-center bg-fundo-principal">
       <div className="max-w-[1240px] w-full mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-12">
         
         {/* Imagem - Ajuste de alinhamento em mobile */}
@@ -24,13 +24,10 @@ const Hero = () => {
 
         {/* Conteúdo */}
         <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-texto-titulo tracking-tight mb-2">
             Leandro Farias
           </h1>
-          <h2 className="text-sm sm:text-base md:text-lg font-medium text-purple-400 mb-4">
-            Aracaju, Sergipe
-          </h2>
-          <p className="text-sm md:text-base text-slate-300 leading-relaxed mb-6 max-w-md">
+          <p className="text-sm md:text-base text-texto-corpo leading-relaxed mb-6 max-w-md">
             As a passionate data scientist, with expertise in machine learning,
             AI, and data analytics, I thrive on the challenges of exploring
             complex data landscapes and uncovering meaningful patterns that drive

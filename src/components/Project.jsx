@@ -21,15 +21,17 @@ function Projects() {
     : PROJECTS_DATA.filter(projeto => projeto.category.includes(categoriaAtiva));
 
   return (
-    <section id="portfolio" className="max-w-5xl mx-auto px-4 py-24 border-t border-slate-900">
+    <section id="portfolio" className="max-w-5xl mx-auto px-4 py-24">
       
       {/* CABEÇALHO */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-white tracking-tight sm:text-4xl">
-          Projetos em Destaque
-        </h2>
-        <p className="mt-3 text-slate-400 max-w-xl mx-auto text-sm">
-          Uma seleção de aplicações reais desenvolvidas com foco em arquitetura limpa e experiência de usuário premium.
+        <div className="mb-4">
+          <span className="px-5 py-1.5 bg-fundo-elemento/50 border border-fundo-elemento/40 text-texto-corpo text-xs font-medium rounded-full font-mono tracking-wide">
+            Portfólio
+          </span>
+        </div>
+        <p className="mt-3 text-texto-corpo max-w-xl mx-auto text-sm">
+          Uma seleção de soluções desenvolvidas. 
         </p>
       </div>
       {/* FILTROS (ESTILO PÍLULA) */}
@@ -38,11 +40,11 @@ function Projects() {
           <button
             key={cat.value}
             onClick={() => setCategoriaAtiva(cat.value)}
-            className={`px-4 py-1.5 rounded-full text-xs font-medium tracking-wide border transition-all duration-200 cursor-pointer ${
-              categoriaAtiva === cat.value
-                ? 'bg-[rgb(55,65,81)] text-[rgb(209,213,219)] text-sm font-inter font-medium rounded-xl px-5 py-1 shadow-lg shadow-cyan-500/5'
-                : 'bg-[rgb(55,65,81)] text-[rgb(209,213,219)] text-sm font-inter font-medium rounded-xl px-5 py-1 border-slate-800/80 hover:text-white hover:border-slate-700'
-            }`}
+            className={`px-5 py-2 rounded-full text-xs font-medium font-mono tracking-wide border transition-all duration-300 cursor-pointer ${
+          categoriaAtiva === cat.value
+            ? 'bg-texto-hover/10 text-texto-hover border-texto-hover shadow-lg shadow-texto-hover/5'
+            : 'bg-fundo-elemento/40 text-texto-corpo border-fundo-elemento/60 hover:text-texto-titulo hover:border-fundo-elemento'
+        }`}
           >
             {cat.label}
           </button>

@@ -20,15 +20,15 @@ function ProjectCard({ projeto, inverter }) {
       {/* CONTEÚDO TEXTUAL */}
       <div className="flex flex-col h-full justify-center">
         {/* Mostra as categorias do projeto separadas por barra */}
-        <span className="text-xs font-mono tracking-widest text-cyan-500 uppercase mb-2 block">
+        <span className="text-xs font-mono tracking-widest text-texto-tag uppercase mb-2 block group-hover:text-texto-hover transition-colors duration-300">
           {projeto.category.join(' / ')}
         </span>
         
-        <h3 className="text-lg md:text-xl font-bold text-[rgb(249,250,251)] tracking-tight mb-4 group-hover:text-blue-600 transition-colors duration-300">
+        <h3 className="text-2xl font-bold text-texto-titulo group-hover:text-texto-hover transition-colors duration-300 mb-4">
           {projeto.title}
         </h3>
         
-        <p className="text-[rgb(209,213,219)] text-base leading-relaxed mb-6 font-normal">
+        <p className="text-texto-corpo text-sm leading-relaxed mb-6">
           {projeto.description}
         </p>
         
@@ -37,7 +37,7 @@ function ProjectCard({ projeto, inverter }) {
           {projeto.tags?.map((tag) => (
             <span 
               key={tag}
-              className="bg-[rgb(55,65,81)] text-[rgb(209,213,219)] text-normal text-sm font-inter font-medium rounded-xl px-5 py-1"
+              className="px-2.5 py-1 bg-fundo-tag border border-fundo-elemento/40 text-texto-tag text-[11px] font-medium font-mono rounded-md group-hover:text-texto-titulo group-hover:border-fundo-elemento transition-all duration-300"
             >
               {tag}
             </span>
@@ -45,7 +45,7 @@ function ProjectCard({ projeto, inverter }) {
         </div>
 
         {/* LINKS */}
-        <div className="flex items-center gap-4 pt-2 border-t border-slate-900/60 mt-auto">
+        <div className="flex items-center gap-1 pt-2 border-t border-slate-900/60 mt-auto">
           <a 
             href={projeto.github}
             target="_blank"

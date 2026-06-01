@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#000300] text-slate-400 py-12 px-4 border-t border-slate-900">
+    <footer className="w-full bg-fundo-principal text-slate-400 py-12 px-4 border-t border-slate-900">
       <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Lado Esquerdo: Marca & Copyright */}
@@ -22,16 +22,16 @@ const Footer = () => {
         <nav aria-label="Navegação do rodapé">
           <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium">
             <li>
-              <a href="#sobre" className="hover:text-blue-400 transition-colors">Sobre</a>
+              <a href="#sobre" className="hover:text-white transition-colors">Sobre</a>
             </li>
             <li>
-              <a href="#portfolio" className="hover:text-blue-400 transition-colors">Portfólio</a>
+              <a href="#portfolio" className="hover:text-white transition-colors">Portfólio</a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-blue-400 transition-colors">Habilidades</a>
+              <a href="#skills" className="hover:text-white transition-colors">Habilidades</a>
             </li>
             <li>
-              <a href="#contato" className="hover:text-blue-400 transition-colors">Contato</a>
+              <a href="#contato" className="hover:text-white transition-colors">Contato</a>
             </li>
           </ul>
         </nav>
