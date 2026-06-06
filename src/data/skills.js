@@ -1,4 +1,3 @@
-// src/data/skills.js
 import { 
   SiPython, SiHtml5, SiJavascript, SiR, SiGit,
   SiReact, SiTailwindcss, SiFigma

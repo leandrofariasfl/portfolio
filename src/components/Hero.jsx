@@ -6,14 +6,13 @@ import linkedinIcon from "/src/assets/icon-elsewhere-linkedin-light-97696cd7d286
 
 const Hero = () => {
   return (
-    // Trocamos h-screen por min-h-screen e adicionamos pt-24 para compensar o Navbar fixed de forma segura
+   
     <section id="sobre" className="text-texto-corpo w-full pt-24 min-h-screen flex items-center justify-center bg-fundo-principal">
       <div className="max-w-[1240px] w-full mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 py-12">
         
-        {/* Imagem - Ajuste de alinhamento em mobile */}
         <div className="flex-shrink-0 order-first md:order-none">
           <div className="w-36 h-36 md:w-52 md:h-52 lg:w-64 lg:h-64 rounded-full p-1 bg-gradient-to-r flow-from-indigo-500 to-purple-500"> 
-            {/* Um leve degradê de borda deixa mais profissional */}
+            
             <img 
               src={fotoPerfil} 
               alt="Foto de perfil de Leandro Farias" 
@@ -22,19 +21,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Conteúdo */}
         <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-texto-titulo tracking-tight mb-2">
             Leandro Farias
           </h1>
           <p className="text-sm md:text-base text-texto-corpo leading-relaxed mb-6 max-w-md">
-            As a passionate data scientist, with expertise in machine learning,
-            AI, and data analytics, I thrive on the challenges of exploring
-            complex data landscapes and uncovering meaningful patterns that drive
-            innovation.
+            Estudante de Sistemas de informação, com experiência em projetos front-end e automação. Busco cenários do dia a dia para solucionar problemas reais através de tecnologia moderna, eficiência e inovação.
           </p>
           
-          {/* Links sociais */}
           <div className="flex gap-5">
             <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform p-1">
               <img src={githubIcon} alt="Acessar GitHub" className="w-6 h-6" />

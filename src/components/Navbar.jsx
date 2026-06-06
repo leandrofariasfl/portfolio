@@ -20,10 +20,10 @@ const Navbar = () => {
   }, [nav]);
 
   return (
-    // 💡 REMOVIDO o backdrop-blur global daqui para não afetar o menu lateral
+    
     <nav className="fixed top-0 left-0 right-0 z-50 bg-fundo-principal/10 border-none border-b">
       
-      {/* 💡 BARRA DO TOPO: O efeito blur agora fica isolado apenas nesta linha horizontal de desktop */}
+      
       <div className="absolute inset-0 backdrop-blur-md bg-fundo-principal/80 -z-10" />
 
       <div className="flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-texto-titulo relative z-10">
@@ -48,14 +48,10 @@ const Navbar = () => {
           {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </button>
 
-        {/* 💡 MOBILE MENU LATERAL (IGUAL À INSPIRAÇÃO):
-            - Usamos 'bg-fundo-principal' puro sem opacidade.
-            - Garantimos que ele não herde nenhum blur de fundo.
-        */}
         <div className={`fixed inset-y-0 right-0 w-[70%] sm:w-[50%] md:w-[40%] h-full border-l border-fundo-elemento/30 bg-fundo-principal z-50 transition-all duration-300 ease-in-out backdrop-blur-none ${
           nav ? 'translate-x-0' : 'translate-x-full'
         }`}>
-          {/* Cabeçalho interno do menu */}
+          
           <div className="flex items-center justify-between h-20 px-6 border-b border-fundo-elemento/20">
             <h1 className="text-xl font-bold text-texto-titulo font-mono">.dev</h1>
           </div>
@@ -68,9 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
         
-        {/* 💡 BACKDROP (ESPAÇO DA ESQUERDA):
-            - Aqui sim fica o efeito escuro com blur pesado para borrar o que restou do Hero.
-        */}
+      
         <div 
           onClick={handleNav} 
           className={`fixed inset-0 bg-black/60 backdrop-blur-md z-40 md:hidden transition-all duration-300 ${

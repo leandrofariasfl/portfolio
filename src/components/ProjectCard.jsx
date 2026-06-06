@@ -2,6 +2,18 @@ import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 
 function ProjectCard({ projeto, inverter }) {
+  // 💡 Mapeador para transformar as tags do banco em texto comercial bonito
+  const formatarCategoria = (cat) => {
+    const dicionario = {
+      'front-end': 'Front-end',
+      'back-end': 'Back-end',
+      'fullstack': 'Fullstack',
+      'automação': 'Automação',
+      'ai/llms': 'AI / LLMs'
+    };
+    return dicionario[cat] || cat;
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center group">
       
@@ -19,9 +31,10 @@ function ProjectCard({ projeto, inverter }) {
 
       {/* CONTEÚDO TEXTUAL */}
       <div className="flex flex-col h-full justify-center">
-        {/* Mostra as categorias do projeto separadas por barra */}
+        
+        {/* 💡 CORRIGIDO: Mostra as categorias estilizadas e unidas por uma barra elegante com espaços */}
         <span className="text-xs font-mono tracking-widest text-texto-tag uppercase mb-2 block group-hover:text-texto-hover transition-colors duration-300">
-          {projeto.category.join(' / ')}
+          {projeto.category.map(formatarCategoria).join(' • ')}
         </span>
         
         <h3 className="text-2xl font-bold text-texto-titulo group-hover:text-texto-hover transition-colors duration-300 mb-4">
