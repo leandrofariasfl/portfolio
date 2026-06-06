@@ -1,16 +1,20 @@
-# React + Vite
+# 💻 Meu Portfólio Profissional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Olá! Este é o repositório do meu portfólio pessoal, desenvolvido para centralizar e apresentar meus principais projetos reais, competências e trajetória acadêmica.
 
-Currently, two official plugins are available:
+🚀 **Veja o projeto em produção:** [Clique aqui para acessar o Portfólio](https://leandrofariasfl.github.io/portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🧑‍💻 Sobre Mim
+Sou estudante de **Sistemas de Informação**, focado no desenvolvimento **Front-end** e na criação de **Automações** para resolver problemas reais e otimizar rotinas do dia a dia através de código limpo, eficiente e inovador.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias e Ferramentas Utilizadas
+* **Core:** React.js / JavaScript (ES6+)
+* **Estilização:** Tailwind CSS (Layouts responsivos, Mobile-First e Dark Mode)
+* **Ícones & Design:** React Icons (Lucide / Feather Icons)
+* **Deploy:** GitHub Pages & Vite
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Estrutura de Projetos Recentes
+O portfólio conta com um sistema dinâmico de filtragem por categorias exclusivo para projetos de:
+* **Front-end:** Rápido gerenciamento de estado, manipulação de eventos do DOM e interfaces modernas.
